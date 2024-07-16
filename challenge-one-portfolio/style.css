@@ -1,0 +1,774 @@
+/*CSS Reset / Normalize*/
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #000;
+   --cor-de-texto: #464646;
+   --cor-de-botao: #2A7AE4;
+   --cor-indefinida: #FFFFFF;
+   --cor-sem-definicao: #EDEDED;
+   --cor-grey: #A2A2A2;
+   --cor-segundo-fundo: #EAF2FD;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
+de utiliza-la. 
+
+Mas o que é o BEM?
+
+BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
+web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
+Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
+de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
+
+Link da documentação oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sessão Menu*/
+section.menu{
+   display: flex;
+   justify-content: space-around;
+   padding: 32px 0;
+   margin-bottom: 32px;
+   
+}
+header{
+    display: flex;
+    gap: 8px;  
+}
+.menu__img{
+    display: flex;
+    color: var(--cor-de-link);
+    width: 22px;
+    height: 22px;
+    margin: 15px 0;
+}
+.menu__title{
+    display: flex;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--cor-de-texto);
+}
+ul.menu__list{
+    display: flex;
+    gap: 32px;
+    padding: 0;
+}
+li.menu__list__item{
+    font-size: 1rem;
+    font-weight: medium;
+    color: var(--cor-de-texto);
+}
+/* Sessão Title */
+section.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.title__div{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    gap: auto;
+}
+.title__profile{
+    display: flex;
+    width: 368px;
+    height: 368px;
+    border-radius: 50%;
+}
+.title__container{
+    width: 50%;
+}
+.title__bio{
+    margin-top: 61px;
+    margin-bottom: 8px;
+    font-size: 3.25rem;
+    font-weight: bold;
+    color: var(--cor-de-texto);
+}
+.title__subsection{
+    margin: 16px 0;
+    font-size: 1.38rem;
+    font-weight: 400;
+    color: var(--cor-de-texto);
+}
+ul.title__network{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 32px;
+    padding-left: 0;
+    color: var(--cor-de-texto);
+}
+
+/*Sessão About*/
+
+section.about{
+    display: flex;
+    background: var(--cor-segundo-fundo);
+}
+.about__container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 64px;
+}
+.about__title{
+    display: flex;
+    font-size: 2rem;
+    font-weight: bold;      
+    color: var(--cor-de-texto);
+    margin: 0;
+}
+.about__paragraph{
+    display: flex;
+    font-size: 1rem;
+    color: var(--cor-de-texto);
+    width: 50%;
+    margin: 0;
+}
+
+/* Sessão Skills */
+section.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.skills__title{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cor-de-texto);
+}
+.skills__line{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+}
+.skills__box{
+    display: flex;
+    justify-content: baseline;
+    width: 176px;
+    height: 174px;
+    background: var(--cor-indefinida);
+}
+.skills__box ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 0 16px;
+    gap: 8px;
+}
+.skills__name{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--cor-de-texto);
+}
+    /*Sessão Hobbies*/
+
+.hobbies__title{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cor-de-texto);
+}
+.hobbies__line{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    background: var(--cor-de-fundo);
+}
+.hobbies__box {
+    display: flex;
+    justify-content: baseline;
+    width: 176px;
+    height: 174px;
+    background: var(--cor-indefinida);   
+}
+.hobbies__box ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 0 16px;
+    gap: 8px;
+    background: var(--cor-indefinida);
+}
+.hobbies__name{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--cor-de-texto);
+}
+
+/* Experiência Acadêmica*/
+
+section.academic{
+    display: flex;
+    flex-direction: column;
+    background: var(--cor-segundo-fundo);
+    margin-top: 32px ;
+    padding: 82px;
+    gap: 32px;
+}
+h2.academic__title{
+    display: flex;
+    justify-content: center;
+    color: var(--cor-de-texto);
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+.academic__courses{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px;
+}
+.academic__courses__box{
+    display: flex;
+    flex-direction: column;
+    
+    width: 268px;
+    height: 247px;
+    gap: 8px;
+}
+ul.academic__courses__list{
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+li.academic__courses__item__img{
+    display: flex;
+    padding: 16px;
+    width: 50%;
+    height: 50%;
+}
+.academic__courses__item__title h4{
+    display: flex;
+    font-size: 1.38rem;
+    font-weight: bold;
+    color: var(--cor-de-texto);
+    margin: 16px;
+}
+.academic__courses__item__subtitle p{
+    font-size: 1rem;
+    font-weight: medium;
+    color: var(--cor-de-texto);
+    margin: 16px;
+}
+
+/* experiência*/
+
+section.experience{
+    display: flex;
+    flex-direction: column;
+    padding: 0 104px;
+}
+.experience__section__title{
+    display: flex;
+    justify-content: center;
+    color: var(--cor-de-texto);
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 32px 0;
+}
+.experience__box-um{
+    display: flex;
+    gap: 16px;
+    margin-bottom: 64px;
+}
+.experience__box-dois{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+    margin-bottom: 64px;
+}
+.experience__img{
+    width: 60%;
+}
+.experience__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    gap: 8px;
+}
+.experience__title{
+    font-size: 1.38rem;
+    font-weight: bold;
+    color: var(--cor-de-texto);
+    margin: 8px 0;
+}
+.experience__text{
+    font-size: 1rem;
+    font-weight: medium;
+    color: var(--cor-de-texto);
+    margin: 8px 0;
+}
+.experience__description{
+    display: flex;
+    gap: 16px;
+}
+.experiencia__botao--repo{
+    font-size: 1rem;
+    color: var(--cor-de-botao);
+    border-color: var(--cor-de-botao);
+    padding: 16px;
+}
+.experiencia__botao--demo{
+    font-size: 1rem;
+    color: var(--cor-indefinida);
+    border-color: var(--cor-de-botao);
+    background: var(--cor-de-botao);
+    padding: 16px;
+}
+/*Contato*/
+
+section.formcontato{
+    display: flex;
+    justify-content: space-around;
+    box-sizing: content-box;
+    background-color: var(--cor-segundo-fundo);
+}
+#contato{
+    display: flex;
+    gap: 16px;
+}
+.formcontato__img{
+    display: flex;
+    width: 100%;
+}
+.formcontato__text{
+    display: flex;
+    flex-direction: column;
+}
+h2.formcontato__title{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cor-de-texto);
+    margin: 0 0 8px 0;
+}
+h3.formcontato__subtext {
+    font-size: 1rem;
+    font-weight: medium;
+    color: var(--cor-de-texto);
+    margin: 0;
+}
+.formcontato__form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 32px;
+    margin-top: 32px;
+}
+.formcontato__input{
+    padding: 20px;    
+    border-style: none;
+    font-size: 1rem;
+    color: var(--cor-de-texto);
+    background: var(--cor-indefinida);
+}
+.formcontato__textarea {
+    border-style: none;
+    font-size: 1rem;
+    font-family: 'Raleway';
+    color: var(--cor-de-texto);
+    padding: 10px;
+}
+.formcontato__botao{
+    width: 165px;
+    height: 51px;
+    background-color: var(--cor-de-botao);
+    color: var(--cor-de-fundo);
+    padding: 16px;
+    font-size: 1rem;
+    color: var(--cor-indefinida);
+    border: none;
+}
+section.footer{
+   display: flex;
+   justify-content: center;
+   font-size: 1rem;
+   font-weight: medium;
+   color: var(--cor-de-texto);
+   background: var(--cor-indefinida);
+   padding: 32px;
+}
+
+/* Chegou a hora de se desafiar com a responsividade, 
+utilize como referência os breakpoints @media abaixo*/
+
+/*Tablet*/
+@media (max-width: 768px) {
+
+/* Menu */
+section.menu{
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 32px;
+    margin: 0;
+}
+.menu__list__item{
+    display: none;
+}
+.menu__list__item__contato{
+    display: flex;
+}
+    
+/*title*/
+.title__div{
+    justify-content: space-between;
+    gap: 32px;
+    padding: 32px;
+}
+.title__profile{
+    width: 146px;
+    height: 146px;
+}
+.title__container{
+    width: 524px;
+    height: 130px;
+    gap: 8px;
+    
+}
+.title__bio{
+    margin-top: 0;
+    font-size: 1.38rem;
+}
+.title__subsection{
+    font-size: 1rem;
+}
+ul.title__network{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+.title__network__item{
+    font-size: 1rem;
+}
+section.about{
+    padding: 32px;
+}
+.about__container{
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+.about__title{
+    font-size: 1.38rem;
+    padding: 0;
+}
+.about__paragraph{
+    font-size: 0.88rem;
+    width: 100%;
+    padding: 0;
+}
+/*Skills*/
+.skills{
+    gap: 32px;
+    padding: 32px;
+}
+.skills__title{
+    font-size: 1.38rem;
+    margin: 0;
+}
+.skills__line{
+    flex-wrap: wrap-reverse;
+    row-gap: 32px;
+}
+.skills__box{
+    width: 224px;
+    height: 118px;
+}
+/*Hobbies*/
+.hobbies{
+    padding: 32px;
+}
+.hobbies__title{
+    font-size: 1.38rem;
+    margin: 0;
+}
+.hobbies__line{
+    flex-wrap: wrap-reverse;
+    gap: 16px;
+    row-gap: 32px;
+    padding-top: 32px;
+}
+.hobbies__box{
+    width: 224px;
+    height: 118px;
+}
+/*Experiências acadêmicas*/
+section.academic{
+    padding: 32px;
+    gap: 32px;
+    margin: 0;
+}
+h2.academic__title{
+    font-size: 1.38rem;
+}
+.academic__courses__box{
+    margin: 0;
+    padding: 0;
+    gap: 8px;
+}
+.academic__courses__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.academic__courses__item__img{
+    padding: 0;
+    width: 224px;
+    height: 118px;
+}
+.academic__courses__item__title h4{
+    font-size: 1rem;
+    margin: 0;
+}
+.academic__courses__item__subtitle p{
+    font-size: 0.88rem;
+    margin: 0;
+}
+
+/*Expeirência profissional*/
+section.experience{
+    padding: 32px 32px 0;
+}
+.experience__section__title{
+    font-size: 1.38rem;
+    margin: 0 0 32px;
+}
+.experience__box-um{
+    flex-direction: column;
+    margin-bottom: 64px;
+}
+.experience__box-dois{
+    flex-direction: column;
+    margin-bottom: 64px ;
+}
+.experience__img{
+    width: 100%;
+}
+.experience__info{
+    margin: 0;
+    gap: 8px;
+}
+.experience__title{
+    font-size: 1rem;
+    margin: 0;
+}
+.experience__text{
+    font-size: 0.88rem;
+    margin: 0;
+}
+.formcontato{
+    padding: 32px;
+}
+#contato.formcontato__contato{
+    padding: 0;
+}
+.formcontato__img{
+    display: none;
+}
+.formcontato__text{
+    width: 692px;
+    height: 573px;
+}
+
+}
+
+/*Mobile*/
+@media (max-width: 425px) {
+    section.menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 16px;
+        gap: 32px;
+    }
+    .menu__title{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .menu__list__item{
+        display: none;
+    }
+    .menu__list__item__contato{
+        display: flex;
+    }
+    
+/*Titulo*/
+section.title{
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+}
+.title__div{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 16px;
+}
+.title__container{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 368px;
+    height: 148px;
+    gap: 16px;
+}
+.title__profile{
+    margin: 0;
+    width: 98px;
+    height: 98px;
+}
+.title__bio{
+    display: flex;
+    margin: 0;
+}
+.title__subsection{
+    margin: 0;
+}
+ul.title__network{
+    margin: 0;
+    gap: 8px;
+}
+.title__network__item a{
+    display: flex;
+    font-size: 14px;
+}
+.title__network__item img{
+    width: 12px;
+    padding-left: 2px;
+}
+/*Sessão sobre*/
+section.about{
+    display: flex;
+    padding: 16px;
+}
+.about__container{
+    gap: 16px;
+}
+/*Skills*/
+section.skills{
+    padding: 16px;
+    gap: 32px;
+}
+.skills__box{
+    display: flex;
+    width: 188px;
+    height: 118px;
+}
+
+/*Hobbies*/
+section.hobbies{
+    padding: 16px;
+    gap: 32px;
+}
+.hobbies__box{
+    display: flex;
+    width: 188px;
+    height: 118px;
+}
+/*Formação Acadêmica*/
+section.academic{
+    padding: 32px;
+    gap: 32px;
+}
+.academic__courses__box{
+    width: 296px;
+    height: 204px;
+}
+.academic__courses__item__img img{
+    display: flex;
+    justify-content: center;
+    width: 254px;
+    height: 98px;
+}
+
+/*Experiência Profissional*/
+section.experience{
+    padding: 32px;
+    gap: 16px;
+}
+.experience__section__title{
+    margin: 0;
+}
+.experience__box-um{
+    margin-bottom: 48px;
+}
+.experience__box-dois{
+    margin-bottom: 48px;
+}
+.experience__img{
+    width: 296px;
+    height: 104px;
+}
+.experience__info{
+    width: 296px;
+    height: 91px;
+}
+.experience__description{
+    height: 40px;
+}
+.experiencia__botao--repo{
+    padding: 12px;
+    width: 108px;
+    height: 40px;
+    font-size: 14px;
+    font-family: 'Raleway';
+}
+.experiencia__botao--demo{
+    padding: 12px;
+    width: 96px;
+    height: 40px;
+    font-size: 14px;
+    font-family: 'Raleway';
+}
+ /*Contato*/
+.formcontato{
+    width: 360px;
+}
+.formcontato__text{
+    width: 362px;
+}
+h2.formcontato__title{
+    font-size: 22px;
+}
+.formcontato__botao{
+    padding: 12px;
+    font-family: 'Raleway';
+    font-size: 14px ;
+}
+/*Footer*/
+
+    
+}
+
